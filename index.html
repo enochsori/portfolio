@@ -13,7 +13,7 @@
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
     ></script>
-    
+
     <script defer src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,44 +23,45 @@
     />
     <!-- add icon  -->
     <link rel="icon" type="images/png" href="images/favicon.png" />
-    
+
     <!-- link stylesheet file -->
     <link rel="stylesheet" href="style.css" />
 
     <title>Enoch's portfolio</title>
   </head>
   <body>
-    <header>
-      <nav class="header__navbar">
-        <div class="logo"><img src="" alt="" /> <span>Enoch</span></div>
-        <ul class="header__menu">
-          <li class="header__menu--item"><a href="">Home</a></li>
-          <li class="header__menu--item"><a href="">About</a></li>
-          <li class="header__menu--item"><a href="">Skills</a></li>
-          <li class="header__menu--item"><a href="">My work</a></li>
-          <li class="header__menu--item"><a href="">Testimonial</a></li>
-          <li class="header__menu--item"><a href=""></a>Contact</li>
-        </ul>
-      </nav>
-      <img class="header__avatar" src="" alt="" />
-      <h1 class="header__title">Hello, I am Dream Coder</h1>
-      <div class="header__discription">
-        A Software Engineer residing in Quebec, Canada
-      </div>
-      <button class="contact">contact me</button>
-    </header>
-    <article class="aboutme">
-      <h1 class="aboutme__title">About me</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-        blanditiis nemo reprehenderit, ab adipisci voluptates saepe, error
-        maiores fugit quod temporibus perspiciatis quibusdam atque autem maxime
-        soluta ipsam dignissimos assumenda?
-      </p>
-    </article>
-    <article class="skills"></article>
-    <article class="mywork"></article>
-    <article class="Testimonial"></article>
-    <footer></footer>
+    <!-- BEM  Block__Element--Modifier -->
+    <head>
+      <nav>
+        <!-- Navbar -->
+        <nav id="navbar">
+          <div class="navbar__log">
+            <i class="fab fa-diaspora"></i>
+            <a href="#">Ellie</a>
+
+          </div>
+          <div class="navbar__menu"></div>
+          <ul class="navbar__menu">
+            <li class="navbar__menu__item">Home</li>
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skills</li>
+            <li class="navbar__menu__item">My work</li>
+            <li class="navbar__menu__item">Testimonial</li>
+            <li class="navbar__menu__item">Contact</li>
+          </ul>
+        </nav>
+        <!-- About me -->
+        <section id="about"></section>
+        <!-- Skills -->
+        <section id="skills"></section>
+        <!-- My works -->
+        <section id="work"></section>
+        <!-- Testimonials -->
+        <section id="testimonials"></section>
+        <!-- Contact -->
+        <section id="contact"></section>
+
+
+
   </body>
 </html>
