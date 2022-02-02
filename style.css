@@ -29,6 +29,9 @@
 
   /* Size */
   --size-border-radius: 4px;
+
+  /* Animation  */
+  --animation-duration: 300ms;
 }
 
 /* Universal tag  */
@@ -119,7 +122,7 @@ p {
 /* Home */
 #home {
   background: url('images/home-background.png') center/cover no-repeat;
-  padding: 40px 40px;
+  padding: 200px 40px 40px 40px;
   text-align: center;
 }
 
@@ -144,4 +147,75 @@ p {
   border: 2px solid var(--color-light-grey);
   border-radius: var(--size-border-radius);
   color: var(--color-grey);
+}
+
+/* Section common */
+.section {
+  text-align: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major__icon {
+  text-align: center;
+  height: 170px;
+  width: 170px;
+  /* 글자를 중간으로 위치하게 도와준다 */
+  line-height: 170px;
+  font-size: 70px;
+  margin: auto;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major__icon:hover i {
+  transform: rotate(-30deg) scale(1.1);
+  color: var(--color-pink);
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
+.job {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.job__logo {
+  width: 120px;
+}
+
+.job__description {
+  margin: 0 16px;
+  text-align: left;
+}
+.job__name,
+.job__period {
+  color: var(--color-light-grey);
+}
+
+.job__name {
+  font-size: var(--font-small);
+}
+.job__period {
+  font-size: var(--font-micro);
 }
