@@ -89,21 +89,36 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-pink);
+  background-color: transparent;
   color: var(--color-white);
-  padding: 16px;
+  padding: 8px;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-pink);
+  transition: all var(--animation-duration) ease-in-out;
 }
 
 .navbar__menu {
   display: flex;
+  color: var(--color-dark-grey);
 }
-
+.navbar__logo__link {
+  color: var(--color-dark-grey);
+}
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: var(--color-dark-grey);
+}
+
+.color--white {
+  color: var(--color-white);
 }
 .navbar__menu__item {
   padding: 8px 12px;
@@ -132,7 +147,8 @@ p {
 /* Home */
 #home {
   background: url('images/home-background.png') center/cover no-repeat;
-  padding: 200px 40px 40px 40px;
+  padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
