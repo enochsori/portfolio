@@ -30,11 +30,21 @@ document.addEventListener('scroll', () => {
     navbarMenu.classList.add('color--white');
     navbarLink.classList.add('color--white');
     navbarLogo.classList.add('color--white');
-    active.style.borderColor('var(--color-white)');
   } else {
     navbar.classList.remove('navbar--dark');
     navbarMenu.classList.remove('color--white');
     navbarLink.classList.remove('color--white');
     navbarLogo.classList.remove('color--white');
   }
+});
+
+// Handle scrolling when tapping on the navbar menu
+navbarMenu.addEventListener('click', (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
+  }
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
 });
