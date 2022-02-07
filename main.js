@@ -1,18 +1,3 @@
-// const navbar = document.querySelector('#navbar');
-// const navbarMenu = document.querySelector('.navbar__menu');
-
-// window.addEventListener('scroll', (e) => {
-//   let scrollLocation = document.documentElement.scrollTop;
-//   navbar.style.backgroundColor = 'var(--color-pink)';
-//   navbarMenu.style.color = 'var(--color-white)';
-//   console.log(scrollLocation);
-
-//   if (scrollLocation < 10) {
-//     navbar.style.backgroundColor = 'transparent';
-//     navbarMenu.style.color = 'var(--color-black)';
-//   }
-// });
-
 'use strict';
 
 // Make navbar transparent when it is on the top
@@ -53,6 +38,16 @@ const homeContactBtn = document.querySelector('.home__contact');
 
 homeContactBtn.addEventListener('click', (event) => {
   scrollIntoView('#contact');
+});
+
+// Make "Home" transparent when it is scrolling down
+
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll', () => {
+  const homeOpacity = 1 - window.scrollY / homeHeight;
+  home.style.opacity = homeOpacity;
 });
 
 function scrollIntoView(selector) {
