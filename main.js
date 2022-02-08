@@ -27,6 +27,11 @@ document.addEventListener('scroll', () => {
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
+
+  const active = document.querySelector('.navbar__menu__item.active');
+  active.classList.remove('active');
+  target.classList.add('active');
+
   if (link == null) {
     return;
   }
@@ -75,6 +80,13 @@ workBtnContainer.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
+
+  // Remove "selection" from the previous and select the new one
+  const active = document.querySelector('.categories__btn.selected');
+  active.classList.remove('selected');
+  console.log(e.target.nodeName);
+  const target = e.target.nodeName == 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
 
   projectContainer.classList.add('anim-out');
   setTimeout(() => {
