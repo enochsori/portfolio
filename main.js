@@ -7,6 +7,8 @@ const navbarLink = document.querySelector('.navbar__logo__link');
 const navbarLogo = document.querySelector('.navbar__logo');
 const active = document.querySelector('.active');
 
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
@@ -28,14 +30,21 @@ navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
 
-  const active = document.querySelector('.navbar__menu__item.active');
-  active.classList.remove('active');
-  target.classList.add('active');
+  // const active = document.querySelector('.navbar__menu__item.active');
+  // active.classList.remove('active');
+  // target.classList.add('active');
 
   if (link == null) {
     return;
   }
   scrollIntoView(link);
+  navbarMenu.classList.toggle('open');
+});
+
+// Navbar toggle button for small screen
+
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
 });
 
 // Handle click on "Contact me" button on home.
