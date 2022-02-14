@@ -126,10 +126,12 @@ p {
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
-  border: 1px solid var(--color-white);
-  border-color: transparent;
+  border: 1px solid transparent;
+  
 }
-
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
   border-radius: var(--size-border-radius);
@@ -491,11 +493,13 @@ p {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  font-size: 50px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
+  font-size: 50px;
   color: var(--color-white);
   background-color: var(--color-pink);
-  opacity: 0;
+  opacity: 0;  
   pointer-events: none;
   transition: all var(--animation-duration) ease-in-out;
 }
@@ -551,7 +555,7 @@ p {
   }
   .section {
     padding: 16px;
-    padding-top: 40px;
+    padding-top: 60px;
   }
   .about__majors {
     flex-direction: column;
@@ -567,6 +571,9 @@ p {
   .categories__btn {
     margin: 4px;
     width: 70%;
+  }
+  .category__count {
+    right :100px;
   }
   .project {
     flex-grow: 1;
