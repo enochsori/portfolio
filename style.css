@@ -98,6 +98,7 @@ p {
   background-color: transparent;
   color: var(--color-white);
   z-index: 1;
+  padding: 0 16px;
 }
 
 #navbar.navbar--dark {
@@ -197,7 +198,7 @@ p {
 }
 .about__majors {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 80px 0;
 }
 
@@ -205,7 +206,7 @@ p {
   text-align: center;
   height: 170px;
   width: 170px;
-  /* 글자를 중간으로 위치하게 도와준다 */
+  /* center alignment */
   line-height: 170px;
   font-size: 70px;
   margin: auto;
