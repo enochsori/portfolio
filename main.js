@@ -8,7 +8,6 @@ const navbarLogo = document.querySelector('.navbar__logo');
 const active = document.querySelector('.active');
 
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
-
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
@@ -38,7 +37,6 @@ navbarMenu.addEventListener('click', (event) => {
 });
 
 // Navbar toggle button for small screen
-
 navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
 });
@@ -51,7 +49,6 @@ homeContactBtn.addEventListener('click', (event) => {
 });
 
 // Make "Home" transparent when it is scrolling down
-
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 
@@ -75,7 +72,6 @@ arrowUp.addEventListener('click', () => {
 });
 
 // Show selected works only
-
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
@@ -134,7 +130,6 @@ function selectNavItem(selected) {
 }
 
 // 2. Intersection Observer
-
 const option = {
   root: null,
   rootMargin: '0px',
