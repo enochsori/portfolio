@@ -4,570 +4,585 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="descrition" content="Portfolio for dream software Enoch" />
-    <meta name="author" content="devSori" />
+    <!-- SEO -->
+    <title>Enoch&#39;s Portfolio</title>
+    <meta name="description" content="Portfolio for web developer Enoch" />
+    <meta name="author" content="Enoch" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <script
-      defer
-      src="https://kit.fontawesome.com/6478f529f2.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- OG (Open Graph Data) -->
+    <meta property="og:title" content="Enoch's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="URL after " />
+    <meta property="og:image" content="URL generated after deployment" />
 
-    <script defer src="main.js"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <!-- add icon  -->
-    <link rel="icon" type="images/png" href="images/favicon.png" />
-
-    <!-- link stylesheet file -->
-    <link rel="stylesheet" href="style.css" />
-
-    <title>Enoch's portfolio</title>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Javascript -->
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav id="navbar">
-      <div class="navbar__logo">
-        <i class="fab fa-diaspora"></i>
-        <a class="navbar__logo__link" href="#">enochSori</a>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__logo__img" src="images/favicon.ico" alt="logo" />
+        <h1 class="header__logo__title"><a href="#">Enoch</a></h1>
       </div>
-
-      <ul class="navbar__menu">
-        <li data-link="#home" class="navbar__menu__item active">Home</li>
-        <li data-link="#about" class="navbar__menu__item">About</li>
-        <li data-link="#skills" class="navbar__menu__item">Skills</li>
-        <li data-link="#work" class="navbar__menu__item">My work</li>
-        <li data-link="#testimonials" class="navbar__menu__item">
-          testimonial
-        </li>
-        <li data-link="#contact" class="navbar__menu__item">Contact</li>
-      </ul>
-
-      <!-- Toggle Button -->
-      <button class="navbar__toggle-btn"><i class="fas fa-bars"></i></button>
-    </nav>
-    <!-- Home -->
-    <section id="home">
-      <div class="home__container">
-        <img
-          src="images/avatar.png"
-          alt="Enoch's profile photo"
-          class="home__avatar"
-        />
-        <h1 class="home__title">
-          Hello, <br />
-          I am a Full Stack Web Developer.
-        </h1>
-        <h2 class="home__description">
-          A singing coder currently residing in Quebec, Canada
-          <br />
-          | ReactJS | VueJS | JavaScript | TypeScript | NodeJS | MongoDB |
-          CSS/HTML |
-        </h2>
-        <button class="home__contact">Contact me</button>
-      </div>
-    </section>
-
-    <!-- About me -->
-    <section id="about" class="section section__container">
-      <h1>About me</h1>
-      <p>
-        Strong technical aptitude demonstrated through committed interest in the
-        technical field and an undergraduate degree in Computer Engineering. As
-        a recent graduate of Concordia bootcamp, I’ve acquired the foundational
-        skills in full-stack web development, and I am looking forward to taking
-        on new challenges in the industry.
-      </p>
-      <div class="about__majors">
-        <div class="major">
-          <div class="major__icon">
-            <i class="fab fa-js"></i>
-          </div>
-          <h2 class="major__title">Front-end</h2>
-          <div class="major__description">
-            HTML/CSS, Javascript,React, Typescript,
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a class="header__menu__item active" href="#home">Home</a></li>
+          <li><a class="header__menu__item" href="#about">About</a></li>
+          <li><a class="header__menu__item" href="#skills">Skills</a></li>
+          <li><a class="header__menu__item" href="#work">My work</a></li>
+          <li>
+            <a class="header__menu__item" href="#testimonial">Testimonial</a>
+          </li>
+          <li><a class="header__menu__item" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="header__toggle" aria-label="navigation menu toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Home -->
+      <section id="home">
+        <div class="home__container">
+          <img
+            class="home__avatar"
+            src="images/profile.png"
+            alt="Enoch's profile"
+          />
+          <h2 class="home__title">
+            Hello <br />I&#39;m
+            <strong class="home__title--strong">Dream Coder</strong>, Enoch
+          </h2>
+          <p class="home__description">
+            A web developer currently residing in Montreal, Canada
             <br />
-            PostCSS, Styled-Components, Web APIs
-          </div>
+            ReactJS | VueJS | JavaScript | TypeScript | NEXTJS | NodeJS |
+            MongoDB | CSS/HTML
+          </p>
+          <a class="home__contact" href="#contact">Contact Me</a>
         </div>
-
-        <!-- <div class="major">
-          <div class="major__icon">
-            <i class="fas fa-mobile"></i>
-          </div>
-          <h2 class="major__title">Mobile</h2>
-          <div class="major__description">
-            Android, IOS, React Native, <br />
-            Flutter, Swift
-          </div>
-        </div> -->
-        <div class="major">
-          <div class="major__icon">
-            <i class="fas fa-server"></i>
-          </div>
-          <h2 class="major__title">Back-end</h2>
-
-          <div class="major__description">NodeJS, Express, MongoDB</div>
-        </div>
-      </div>
-      <div class="about__job">
-        <div class="job">
-          <img src="images/concordia__logo.png" alt="" class="job__logo" />
-          <div class="job__description">
-            <p class="job__name">
-              <b>Diploma </b> in Concordia University Full-Stack Web Development
-              Bootcamp
-            </p>
-            <p class="job__period">March - June, 2022</p>
-          </div>
-        </div>
-        <div class="job">
-          <img src="images/NILE_logo.png" alt="" class="job__logo" />
-          <div class="job__description">
-            <p class="job__name">
-              <b>Bachelor's Degree in Computer Engineering </b>in National
-              Institute for Lifelong Education (South Korea)
-            </p>
-            <p class="job__period">January, 2012</p>
-          </div>
-        </div>
-        <div class="job">
-          <img src="images/sarang__logo.jpeg" alt="" class="job__logo" />
-          <div class="job__description">
-            <p class="job__name">
-              <b> Youth minister </b> in Montreal Sarang Church (part-time
-              position)
-            </p>
-            <p class="job__period">2017 - current</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="section__container">
-        <h1>Skills</h1>
-        <h2>Skills & Attributes</h2>
-        <p>
-          Experience with all phases of the software life-cycle. Passion for
-          learning new technologies. Capable of working both on a team and
-          working alone. Ability to plan and time schedule, work, under strict
-          time pressure and adapt quickly when needed.
+      </section>
+      <!-- About -->
+      <section id="about" class="section max-container">
+        <h2 class="title">About me</h2>
+        <p class="description">
+          Armed with hands-on experience in Web development, alongside my
+          graduation from Concordia full-stack web development bootcamp and an
+          undergraduat degree in Computer Engineering, I am eager to bring my
+          multifaceted skills and enthusiasm to contribute to the success of
+          your team.
         </p>
-        <div class="skillset">
-          <div class="skillset__left">
-            <h3 class="skillset__title">Skills</h3>
+        <ul class="majors">
+          <li class="major">
+            <i class="fa-brands fa-html5 major__icon"></i>
+            <p class="major__title">Front-end</p>
+            <p>
+              HTML, CSS, JavaScript, TypeScript, React, Vue, NextJS,
+              Styled-components, TailwindCSS, PostCSS, Web APIs
+            </p>
+          </li>
 
-            <div class="skill">
-              <div class="skill__description">
-                <span>Javascript</span>
-                <span>90%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 90%"></div>
-              </div>
+          <li class="major">
+            <i class="fa-solid fa-server major__icon"></i>
+            <p class="major__title">Back-end</p>
+            <p>JavaScript, NodeJs, ExpressJS, Rest APIs, MongoDB</p>
+          </li>
+        </ul>
+        <ul class="jobs">
+          <li class="job">
+            <img src="images/jobs/cydef_logo_dark.png" alt="CYDEF corp. logo" />
+            <div>
+              <p class="job__name">CYDEF, front-end developer</p>
+              <p class="job__period">2013 May - Until now</p>
             </div>
-
-            <div class="skill">
-              <div class="skill__description">
-                <span>React</span>
-                <span>90%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 90%"></div>
-              </div>
+          </li>
+          <li class="job">
+            <img
+              src="images/jobs/logo__sarang_church.jpeg"
+              alt="samsung logo"
+            />
+            <div>
+              <p class="job__name">
+                Montreal Sarang Church, Youth minister (Part-time)
+              </p>
+              <p class="job__period">2017 January - until now</p>
             </div>
-
-            <div class="skill">
-              <div class="skill__description">
-                <span>Vue</span>
-                <span>40%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 40%"></div>
-              </div>
+          </li>
+          <li class="job">
+            <img src="images/jobs/logo-footer.webp" alt="samsung logo" />
+            <div>
+              <p class="job__name">
+                Tempora Heaters - UmbrellaOS, front-end developer
+              </p>
+              <p class="job__period">2022 June - 2023 May</p>
             </div>
-
-            <div class="skill">
-              <div class="skill__description">
-                <span>Typescript</span>
-                <span>30%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 30%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <div class="skill__description">
-                <span>HTML / CSS</span>
-                <span>90%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 90%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <div class="skill__description">
-                <span>Styled-components</span>
-                <span>90%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 90%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <div class="skill__description">
-                <span>PostCSS</span>
-                <span>50%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 60%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <div class="skill__description">
-                <span>NodeJS</span>
-                <span>70%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 70%"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="skillset__right">
-            <div class="tools">
-              <h3 class="skillset__title">Tools</h3>
-              <ul class="tools__list">
-                <li><span>REST APIs</span></li>
-                <li><span>npm</span></li>
-                <li><span>vs code</span></li>
-                <li><span>github</span></li>
-                <li><span>gitlab</span></li>
-                <li><span>Insomnia</span></li>
-                <li><span>Postman</span></li>
-                <li><span></span></li>
-                <li><span></span></li>
+          </li>
+        </ul>
+      </section>
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="max-container">
+          <h2 class="title">My Skills</h2>
+          <p class="description">Skills & Attributes</p>
+          <p>
+            Experience with all phases of the software life-cycle. Passion for
+            learning new technologies. Capable of working both on a team and
+            working alone. Ability to plan and time schedule, work, under strict
+            time pressure and adapt quickly when needed.
+          </p>
+          <div class="skills">
+            <section class="skills__coding">
+              <h3 class="skills__title">Coding Skills</h3>
+              <ul>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>HTML</span><span>98%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 98%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>CSS</span><span>90%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>JavaScript</span><span>90%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>TypeScript</span><span>80%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 80%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>React</span><span>80%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 80%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>VUE</span><span>80%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 80%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>NEXT.js</span><span>40%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 40%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>NodeJs</span><span>50%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 50%"></div>
+                  </div>
+                </li>
               </ul>
-            </div>
-            <div class="etc">
-              <h3 class="skillset__title">Things to enjoy</h3>
-              <ul class="Etc__list">
-                <li><span>Driving country roads</span></li>
-                <li><span>Playing a guitar</span></li>
-                <li><span>Singing</span></li>
+            </section>
+            <section class="skills__tools">
+              <h3 class="skills__title">Tools</h3>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>REST API</li>
+                <li>Postman</li>
+                <li>Adobe XD</li>
+                <li>Figma</li>
               </ul>
-            </div>
+            </section>
+            <section class="skills__etc">
+              <h3 class="skills__title">Etc</h3>
+              <ul>
+                <li>Git</li>
+                <li>Scrum</li>
+                <li>MS Azure</li>
+                <li>firebase</li>
+                <li>Redux, React-router, React-query</li>
+                <li>Styled-components, TailwindCSS, PostCSS</li>
+              </ul>
+            </section>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- Work -->
+      <section id="work" class="section">
+        <div class="max-container">
+          <h2 class="title">My work</h2>
+          <p class="description">Projects</p>
+          <ul class="categories">
+            <li>
+              <button class="category category--selected" data-category="all">
+                All <span class="category__count">12</span>
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="front-end">
+                Front-end <span class="category__count">8</span>
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="back-end">
+                Back-end <span class="category__count">2</span>
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="full-stack">
+                Full-stack <span class="category__count">2</span>
+              </button>
+            </li>
+          </ul>
 
-    <!-- My works -->
-    <section id="work" class="section">
-      <div class="section__container">
-        <h1>My Work</h1>
-        <h3>Workshops & Projects</h3>
-        <div class="work__categories">
-          <button class="categories__btn selected" data-filter="*">
-            All <span class="category__count">12</span>
-          </button>
-          <button class="categories__btn" data-filter="front-end">
-            Front-end <span class="category__count">8</span>
-          </button>
-          <button class="categories__btn" data-filter="back-end">
-            Back-end <span class="category__count">2</span>
-          </button>
-          <button class="categories__btn" data-filter="full-stack">
-            Full-stack <span class="category__count">2</span>
-          </button>
-        </div>
-
-        <div class="work__projects">
-          <a
-            href="https://github.com/enochsori/js-thedom-P2"
-            class="project"
-            target="blank"
-            data-type="front-end"
-          >
-            <img
-              class="project__img"
-              src="images/projects/1FrogRace-Javascript(DOM).png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Frog race</h3>
-              <span>Javascript DOM manipulation</span>
-              <span>HTML/CSS Javascript</span>
-            </div>
-          </a>
-          <a
-            href="https://enochsori.github.io/tic-tac-toe/"
-            class="project"
-            target="blank"
-            data-type="front-end"
-          >
-            <img
-              class="project__img"
-              src="images/projects/2 Tic-tac-toe(Javascript).png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Tic Tac Toe</h3>
-              <span>Javascript Consolidation</span>
-              <span>HTML/CSS, Javascript</span>
-            </div>
-          </a>
-          <a
-            href="https://dancing-entremet-7427e4.netlify.app/"
-            class="project"
-            target="blank"
-            data-type="front-end"
-          >
-            <img
-              class="project__img"
-              src="images/projects/3 Nyan cat - Javascript game project.png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Falling Cats</h3>
-              <span>JS Object Oriented Programming</span>
-              <span>HTML/CSS, Javascript</span>
-            </div>
-          </a>
-          <a
-            href="https://github.com/enochsori/mini-project-facespace"
-            class="project"
-            target="blank"
-            data-type="front-end"
-          >
-            <img
-              class="project__img"
-              src="images/projects/4 Facespace-React(routing).png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Facespace</h3>
-              <span>React Routing, Fetching data from server </span>
-              <span>HTML/CSS, React</span>
-            </div>
-          </a>
-          <a
-            href="https://github.com/enochsori/react-effects"
-            class="project"
-            target="blank"
-            data-type="front-end"
-          >
-            <img
-              class="project__img"
-              src="images/projects/5 Cookie Clicker - React hooks(useEffect).png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Cookie Clicker Game</h3>
-              <span>React Hooks</span>
-              <span>HTML/CSS, React</span>
-            </div>
-          </a>
-          <a
-            href="https://github.com/enochsori/react-state-P2"
-            class="project"
-            target="blank"
-            data-type="front-end"
-          >
-            <img
-              class="project__img"
-              src="images/projects/6 Autocomplete - react hooks(useState).png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Typeahead - AutoComplete</h3>
-              <span>React hooks (state)</span>
-              <span>HTML/CSS, React</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/enochsori/react-ecosystem"
-            class="project"
-            target="blank"
-            data-type="front-end"
-          >
-            <img
-              class="project__img"
-              src="images/projects/7 Fruit Emporium - React rendering.png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Fruit Emporium</h3>
-              <span>React Ecosystme</span>
-              <span>React-router-dom, styled-components</span>
-            </div>
-          </a>
-          <a
-            href="https://github.com/enochsori/nodejs-url-params"
-            class="project"
-            target="blank"
-            data-type="back-end"
-          >
-            <img
-              class="project__img"
-              src="images/projects/8 NodeJs - url parmas Workshop.png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Top 50 musics</h3>
-              <span>NodeJS url params</span>
-              <span>React, NodeJS</span>
-            </div>
-          </a>
-          <a
-            href="https://github.com/enochsori/project-twitter-clone"
-            class="project"
-            target="blank"
-            data-type="front-end"
-          >
-            <img
-              class="project__img"
-              src="images/projects/12 TwitterClone.png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Twitter Clone</h3>
-              <span>React project with NodeJS</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/enochsori/project-slingair"
-            class="project"
-            target="blank"
-            data-type="full-stack"
-          >
-            <img
-              class="project__img"
-              src="images/projects/9 Slingshot airlines - NodeJS .png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Slingshot Airlines</h3>
-              <span>React, NodeJS, MongoDB</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/enochsori/project-indiecafegram"
-            class="project"
-            target="blank"
-            data-type="full-stack"
-          >
-            <img
-              class="project__img"
-              src="images/projects/10 IndieCafegram - -personal project.png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>IndieCafegram</h3>
-              <span
-                >React, styled-componenets, Google map API, NodeJS,
-                MongoDB</span
+          <ul class="projects">
+            <li class="project" data-type="front-end">
+              <a
+                href="https://github.com/enochsori/js-thedom-P2"
+                target="_blank"
               >
-            </div>
-          </a>
+                <img
+                  src="images/projects/1FrogRace-Javascript(DOM).png"
+                  alt="project1"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Frog race</h3>
+                  <span>Javascript DOM manipulation</span>
+                  <span>HTML/CSS Javascript</span>
+                </div>
+              </a>
+            </li>
 
-          <a
-            href="https://github.com/enochsori/nodejs-http-methods"
-            class="project"
-            target="blank"
-            data-type="back-end"
-          >
-            <img
-              class="project__img"
-              src="images/projects/11 order information - NodeJs(http methods).png"
-              alt=""
-            />
-            <div class="project__description">
-              <h3>Order Form</h3>
-              <span>NodeJS (http methods)</span>
-            </div>
-          </a>
+            <li class="project" data-type="front-end">
+              <a
+                href="https://enochsori.github.io/tic-tac-toe/"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/2 Tic-tac-toe(Javascript).png"
+                  alt="project2"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Tic Tac Toe</h3>
+                  <span>Javascript Consolidation</span>
+                  <span>HTML/CSS, Javascript</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-type="front-end">
+              <a
+                href="https://dancing-entremet-7427e4.netlify.app/"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/3 Nyan cat - Javascript game project.png"
+                  alt="project3"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Falling Cats</h3>
+                  <span>JS Object Oriented Programming</span>
+                  <span>HTML/CSS, Javascript</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-type="front-end">
+              <a
+                href="https://github.com/enochsori/mini-project-facespace"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/4 Facespace-React(routing).png"
+                  alt="project4"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Face Space</h3>
+                  <span>React Routing, Fetching data from server </span>
+                  <span>HTML/CSS, React</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-type="front-end">
+              <a
+                href="https://github.com/enochsori/react-effects"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/5 Cookie Clicker - React hooks(useEffect).png"
+                  alt="project5"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Cooke Clicker Game</h3>
+                  <span>React Hooks</span>
+                  <span>HTML/CSS, React</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-type="front-end">
+              <a
+                href="https://github.com/enochsori/react-state-P2"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/6 Autocomplete - react hooks(useState).png"
+                  alt="project6"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Auto complete</h3>
+                  <span>React hooks (state)</span>
+                  <span>HTML/CSS, React</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-type="front-end">
+              <a
+                href="https://github.com/enochsori/react-ecosystem"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/7 Fruit Emporium - React rendering.png"
+                  alt="project7"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Frut Emporium</h3>
+                  <span>React Ecosystem</span>
+                  <span>React-router-dom, styled-components</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-type="back-end">
+              <a
+                href="https://github.com/enochsori/nodejs-url-params"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/8 NodeJs - url parmas Workshop.png"
+                  alt="project8"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Top 50 musics</h3>
+                  <span>NodeJS url params</span>
+                  <span>React, NodeJS</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-type="front-end">
+              <a
+                href="https://github.com/enochsori/project-twitter-clone"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/12 TwitterClone.png"
+                  alt="project8"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Twitter clone project</h3>
+                  <span>React project with NodeJS</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-type="full-stack">
+              <a
+                href="https://github.com/enochsori/project-slingair"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/9 Slingshot airlines - NodeJS .png"
+                  alt="project8"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Slingshot Airlines</h3>
+                  <span>React, NodeJS, MongoDB</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-type="full-stack">
+              <a
+                href="https://github.com/enochsori/project-indiecafegram"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/10 IndieCafegram - -personal project.png"
+                  alt="project8"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">IndieCafegram</h3>
+                  <span>
+                    React, styled-Components, Google map API, NodeJS,
+                    MongoDB</span
+                  >
+                </div>
+              </a>
+            </li>
+
+            <li class="project" data-type="back-end">
+              <a
+                href="https://github.com/enochsori/nodejs-http-methods"
+                target="_blank"
+              >
+                <img
+                  src="images/projects/11 order information - NodeJs(http methods).png"
+                  alt="project12"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Order Form</h3>
+                  <span>NodeJS (http methods)</span>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="section">
-      <div class="section__container">
-        <h1>Testimonials</h1>
-        <h3>See what they say about me</h3>
-        <div class="testimonials">
-          <div class="testimonial">
+      </section>
+      <!-- Testimonials -->
+      <section id="testimonial" class="section max-container">
+        <h2 class="title">Testimonial</h2>
+        <p class="description">See what they say about me</p>
+        <ul class="testimonials">
+          <li class="testimonial">
             <img
-              src="images/testimonial/testimonial1.png"
-              alt=""
-              class="testimonial__avatar"
+              src="images/testimonials/dev-Hyun.png"
+              alt="people1"
+              class="testimonial__img"
             />
-            <div class="testimonial__speech-bubble">
-              <p>
-                Brother Enoch is a precious person who is truly indispensable to
-                our community. He has not stopped serving and loving people in
-                the unseen for the last 10 years. He has a good balance of
-                ability and character.
-              </p>
-              <p class="name">
-                <a href="#">Senior Pastor, Seung Soo Kim</a> / Montreal Sarang
-                Korean Chuch
-              </p>
-            </div>
-          </div>
-
-          <div class="testimonial">
-            <div class="testimonial__speech-bubble">
+            <div class="testimonial__bubble">
               <p>
                 Enoch is focused and ready to take any challenge thrown on his
                 way. His positivity will greatly help any team he’s in, and will
                 be one of the greatest asset the company have.
               </p>
-              <p class="name">
-                <a href="#">Front-end developer, Hyun Cho</a> / company
+              <p>
+                <a
+                  href="https://linkedin.com/in/smilehyun"
+                  class="testimonial__bubble__name"
+                  target="_blank"
+                  >Senior web developer, Hyun Cho
+                </a>
+                / CYDEF
               </p>
             </div>
+          </li>
+          <li class="testimonial">
             <img
-              src="images/testimonial/Testimonials2.png"
-              alt=""
-              class="testimonial__avatar"
+              src="images/testimonials/pastor_Kim.png "
+              alt="people2"
+              class="testimonial__img"
             />
-          </div>
-        </div>
+            <div class="testimonial__bubble">
+              <p>
+                Brother Enoch, a remarkable individual, holds an irreplaceable
+                role within our community. For the past decade, he has
+                ceaselessly dedicated himself to serving and caring for others,
+                even in the most inconspicuous ways. With a remarkable blend of
+                talent and integrity, he embodies a harmonious balance of
+                ability and character.
+              </p>
+              <p>
+                <a
+                  href="http://www.sarangchurch.ca/"
+                  target="_blank"
+                  class="testimonial__bubble__name"
+                  >Senior Pastor, Seung Soo kim</a
+                >
+                / Montreal Sarang Church
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- Arrow up -->
+      <aside>
+        <a class="arrow-up" href="#home" title="back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </aside>
+    </main>
+    <!-- Footer -->
+    <footer id="contact" class="section">
+      <div class="max-container">
+        <h2 class="title">Let&#39;s talk</h2>
+        <a class="description" href="mailto:enoch.ha915@gmail.com"
+          >enoch.ha915@gmail.com</a
+        >
+        <p class="description">514) 431-8201</p>
+        <ul class="contact__links">
+          <li>
+            <a
+              class="contact__link"
+              href="https://github.com/enochSori"
+              target="_blank"
+              title="my github link"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="contact__link"
+              href="https://www.linkedin.com/in/enochsori/"
+              target="_blank"
+              title="my linkedin link"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
       </div>
-    </section>
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <h1 class="contact__title">Let's talk</h1>
-      <h2 class="contact__email">enoch.ha915@gmail.com</h2>
-      <h2 class="contact__email">514) 431-8201</h2>
-      <div class="contact__links">
-        <a href="https://github.com/enochsori"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/enochsori/"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-      </div>
-      <p class="contact__rights">
-        2022 Dream Coding Enoch - All rights reserved
-      </p>
-    </section>
-    <button class="arrow-up">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+    </footer>
   </body>
 </html>
